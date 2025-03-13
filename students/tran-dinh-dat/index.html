@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Bản thân</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header {
+        background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-card {
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        overflow: hidden;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .profile-header {
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        padding: 1rem;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .interest-item,
+      .project-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+
+      .interest-icon,
+      .project-icon {
+        margin-right: 10px;
+        width: 25px;
+        text-align: center;
+        color: #0d6efd;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: #0d6efd;
+      }
+
+      .section-title i {
+        margin-right: 10px;
+      }
+
+      .contact-info {
+        background-color: #f1f3f5;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 1rem;
+      }
+
+      .profile-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .profile-img {
+        transition: transform 0.5s;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .profile-img-container:hover .profile-img {
+        transform: scale(1.05);
+      }
+
+      .social-links a {
+        color: #0d6efd;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #0a58ca;
+      }
+
+      .card-title {
+        font-weight: 700;
+        color: #212529;
+      }
+
+      .list-group-item {
+        border: none;
+        padding: 0.5rem 0;
+      }
+
+      .badge {
+        font-weight: normal;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Skill chart styles */
+      .skills-chart {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .skill-bar {
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .skill-name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .skill-name i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+        color: #0d6efd;
+      }
+
+      .skill-level {
+        height: 30px;
+        background-color: #e9ecef;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .skill-percent {
+        position: absolute;
+        height: 100%;
+        background: linear-gradient(to right, #0d6efd, #0a58ca);
+        border-radius: 5px 0 0 5px;
+        transition: width 1.5s ease-in-out;
+      }
+
+      .skill-percent.full {
+        border-radius: 5px;
+      }
+
+      .percent-text {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-weight: bold;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-white text-center py-4 mb-4">
+      <h1><i class="fas fa-id-card me-2"></i>Trần Đình Đạt</h1>
+      <p class="mb-0">Frontend Developer | UI/UX Designer</p>
+    </header>
+
+    <div class="container">
+      <div class="card profile-card mx-auto mb-4" style="max-width: 700px">
+        <div class="profile-img-container">
+          <img src="/assets/dat.jpg" class="profile-img" alt="Trần Đình Đạt" />
+        </div>
+
+        <div class="profile-header text-center">
+          <h3 class="card-title mb-1">Trần Đình Đạt</h3>
+          <p class="text-muted mb-2">Frontend Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                <i class="fas fa-birthday-cake text-primary me-2"></i
+                ><strong>Tuổi:</strong> 22
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                <i class="fas fa-map-marker-alt text-primary me-2"></i
+                ><strong>Nơi sống:</strong> Hồ Chí Minh
+              </p>
+            </div>
+          </div>
+          <p>
+            <i class="fas fa-university text-primary me-2"></i
+            ><strong>Sinh viên năm 4 tại Hutech</strong>
+          </p>
+
+          <div class="section-title"><i class="fas fa-heart"></i> Sở thích</div>
+          <div class="row mb-3">
+            <div class="col-6">
+              <div class="interest-item">
+                <span class="interest-icon"><i class="fas fa-code"></i></span>
+                <span>Coding</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="interest-item">
+                <span class="interest-icon"><i class="fas fa-tv"></i></span>
+                <span>Anime</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="interest-item">
+                <span class="interest-icon"
+                  ><i class="fas fa-gamepad"></i
+                ></span>
+                <span>Game</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="interest-item">
+                <span class="interest-icon"
+                  ><i class="fas fa-paint-brush"></i
+                ></span>
+                <span>Draw</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title"><i class="fas fa-tools"></i> Kỹ năng</div>
+
+          <!-- Vertical bar chart for skills -->
+          <div class="skills-chart">
+            <div class="row">
+              <div class="col-md-3 col-6 text-center mb-3">
+                <div class="skill-bar">
+                  <div class="skill-name">
+                    <i class="fab fa-react"></i>
+                    <span>ReactJS</span>
+                  </div>
+                  <div
+                    style="
+                      height: 150px;
+                      position: relative;
+                      background-color: #e9ecef;
+                      border-radius: 5px;
+                      width: 40px;
+                      margin: 0 auto;
+                    "
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 90%;
+                        background: linear-gradient(to top, #0d6efd, #0a58ca);
+                        border-radius: 0 0 5px 5px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        position: absolute;
+                        top: 5px;
+                        width: 100%;
+                        text-align: center;
+                        color: #0d6efd;
+                        font-weight: bold;
+                      "
+                    >
+                      90%
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-6 text-center mb-3">
+                <div class="skill-bar">
+                  <div class="skill-name">
+                    <i class="fab fa-css3"></i>
+                    <span>Tailwind</span>
+                  </div>
+                  <div
+                    style="
+                      height: 150px;
+                      position: relative;
+                      background-color: #e9ecef;
+                      border-radius: 5px;
+                      width: 40px;
+                      margin: 0 auto;
+                    "
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 85%;
+                        background: linear-gradient(to top, #0d6efd, #0a58ca);
+                        border-radius: 0 0 5px 5px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        position: absolute;
+                        top: 5px;
+                        width: 100%;
+                        text-align: center;
+                        color: #0d6efd;
+                        font-weight: bold;
+                      "
+                    >
+                      85%
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-6 text-center mb-3">
+                <div class="skill-bar">
+                  <div class="skill-name">
+                    <i class="fab fa-figma"></i>
+                    <span>Figma</span>
+                  </div>
+                  <div
+                    style="
+                      height: 150px;
+                      position: relative;
+                      background-color: #e9ecef;
+                      border-radius: 5px;
+                      width: 40px;
+                      margin: 0 auto;
+                    "
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 80%;
+                        background: linear-gradient(to top, #0d6efd, #0a58ca);
+                        border-radius: 0 0 5px 5px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        position: absolute;
+                        top: 5px;
+                        width: 100%;
+                        text-align: center;
+                        color: #0d6efd;
+                        font-weight: bold;
+                      "
+                    >
+                      80%
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-6 text-center mb-3">
+                <div class="skill-bar">
+                  <div class="skill-name">
+                    <i class="fas fa-tools"></i>
+                    <span>Dev Tools</span>
+                  </div>
+                  <div
+                    style="
+                      height: 150px;
+                      position: relative;
+                      background-color: #e9ecef;
+                      border-radius: 5px;
+                      width: 40px;
+                      margin: 0 auto;
+                    "
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 85%;
+                        background: linear-gradient(to top, #0d6efd, #0a58ca);
+                        border-radius: 0 0 5px 5px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        position: absolute;
+                        top: 5px;
+                        width: 100%;
+                        text-align: center;
+                        color: #0d6efd;
+                        font-weight: bold;
+                      "
+                    >
+                      85%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <i class="fas fa-project-diagram"></i> Dự án tham gia
+          </div>
+          <div class="project-item">
+            <span class="project-icon"><i class="fas fa-book"></i></span>
+            <a
+              href="https://github.com/sharrlotte/WebNovel"
+              target="_blank"
+              class="text-decoration-none"
+              >WebNovel</a
+            >
+          </div>
+
+          <div class="project-item">
+            <span class="project-icon"><i class="fas fa-coffee"></i></span>
+            <a
+              href="https://github.com/Dat-upoverloading/CafeTheDating"
+              target="_blank"
+              class="text-decoration-none"
+              >CafeTheDating</a
+            >
+          </div>
+
+          <div class="section-title">
+            <i class="fas fa-laptop-code"></i> Công nghệ sử dụng
+          </div>
+          <div>
+            <span class="badge bg-primary"
+              ><i class="fab fa-react me-1"></i> React</span
+            >
+            <span class="badge bg-info text-dark"
+              ><i class="fab fa-css3 me-1"></i> Tailwind</span
+            >
+            <span class="badge bg-success"
+              ><i class="fab fa-figma me-1"></i> Figma</span
+            >
+            <span class="badge bg-secondary"
+              ><i class="fab fa-git-alt me-1"></i> Git</span
+            >
+            <span class="badge bg-danger"
+              ><i class="fab fa-js me-1"></i> JavaScript</span
+            >
+            <span class="badge bg-warning text-dark"
+              ><i class="fas fa-code me-1"></i> HTML/CSS</span
+            >
+            <span class="badge bg-dark"
+              ><i class="fab fa-github me-1"></i> GitHub</span
+            >
+            <span class="badge bg-primary"
+              ><i class="fab fa-bootstrap me-1"></i> Bootstrap</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Animation for skill bars when page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        // Already styled inline for immediate display
+      });
+    </script>
+  </body>
+</html>
