@@ -15,6 +15,19 @@ body {
 	gap: 8px;
 }
 
+.card-img-top {
+	width: 40px;
+	height: 40px;
+	max-width: 40px;
+	max-height: 40px;
+	object-fit: cover;
+	image-rendering: -moz-crisp-edges; /* Firefox        */
+	image-rendering: -o-crisp-edges; /* Opera          */
+	image-rendering: -webkit-optimize-contrast; /* Safari         */
+	image-rendering: optimize-contrast; /* CSS3 Proposed  */
+	-ms-interpolation-mode: nearest-neighbor; /* IE8+           */
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
