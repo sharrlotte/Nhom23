@@ -1,0 +1,37 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	margin: 0;
+	padding: 0;
+}
+
+.card {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeIn 1s ease-out forwards;
+	text-decoration: none;
+}
+
+.card-img-top {
+	width: 40px;
+	height: 40px;
+	max-width: 40px;
+	max-height: 40px;
+	object-fit: cover;
+	image-rendering: -moz-crisp-edges; /* Firefox        */
+	image-rendering: -o-crisp-edges; /* Opera          */
+	image-rendering: -webkit-optimize-contrast; /* Safari         */
+	image-rendering: optimize-contrast; /* CSS3 Proposed  */
+	-ms-interpolation-mode: nearest-neighbor; /* IE8+           */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
