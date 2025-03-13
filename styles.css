@@ -11,10 +11,6 @@ body {
 	animation: fadeIn 1s ease-out forwards;
 }
 
-.row {
-	gap: 8px;
-}
-
 .card-img-top {
 	width: 40px;
 	height: 40px;
